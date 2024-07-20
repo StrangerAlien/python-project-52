@@ -3,7 +3,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 
 class CreateUserView(SuccessMessageMixin, CreateView):
-    template_name = 'create.html'
+    # template_name = 'create.html'
     pass
 
 
