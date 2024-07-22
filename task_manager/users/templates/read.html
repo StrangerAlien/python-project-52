@@ -1,1 +1,37 @@
-<h1>read test</h1>
+{% extends "base.html" %}
+{% load i18n %}
+
+<!--{% block title %}{% translate 'Users' %}{% endblock %}-->
+
+{% block content %}
+
+<h1 class="my-4">
+    Пользователи
+</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Имя пользователя</th>
+        <th>Полное имя</th>
+        <th>Дата создания</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in users_read %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.first_name }} {{ user.last_name }}</td>
+        <td>{{ user.date_joined }}</td>
+        <td>
+            <a href="url Изменить">Изменить</a>
+            <br>
+            <a href="{url Удалить">Удалить</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

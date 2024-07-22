@@ -17,7 +17,7 @@ class CreateUserView(SuccessMessageMixin, CreateView):
 class ReadUserView(ListView):
     model = get_user_model()
     template_name = 'read.html'
-    context_object_name = 'users'
+    context_object_name = 'users_read'
 
 
 class UpdateUserView(UpdateView):
